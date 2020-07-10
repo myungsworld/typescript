@@ -36,3 +36,31 @@ following this direction
     "prestart": "tsc"
     }
 ```
+NodeJS doesn't understand typescript so we need to make it to Javascript  
+
+Moving on..  
+
+- **In terminal yarn add tsc-watch -dev**  
+Too lazy to type __yarn start__ so we'll omit it  
+If you don't mind you don't need to do this  
+```typescript
+
+//package.json
+"scripts": {
+  "start": "tsc-watch --onSuccess \"node test.js\""
+  }
+  
+//tsconfig.json
+{
+  "compilerOptions": {
+       "target": "ES2015",  
+       "module": "commonjs",
+       "sourceMap": true,
+       "outDir" : "dist"
+  },
+  //include는 어src/test.ts일 될지 타입스크립트에 알려줌
+  "include":["src/**/*"], 
+  "exclude":["node_modules"]
+}
+```
+Make src and dist(distribution) folders and edit tsconfig.json and package.json files.
