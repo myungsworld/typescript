@@ -25,3 +25,14 @@ This JSON file will let us how to compile javascript
   "exclude":["node_modules"]
 }
 ```
+Moving on  
+
+I'm gonna use __yarn start__ instead of __tsc__ in order to check console.log() as well  
+following this direction  
+- **In file package.json**  
+```typescript
+  "scripts": {
+    "start": "node test.js",
+    "prestart": "tsc"
+    }
+```
