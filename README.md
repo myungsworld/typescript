@@ -7,7 +7,7 @@
 - **yarn init**  
 Create a new package in the local directory  
   
-- **yarn global add typescript**  
+- **yarn add typescript**  
 Install typescript  
 
 - **new file tsconfig.json create**  
@@ -21,7 +21,7 @@ This JSON file will let us how to compile javascript
        "sourceMap": true
   },
   //include는 어떤파일이 컴파일 될지 타입스크립트에 알려줌
-  "include":["test.ts"], 
+  "include":["index.ts"], 
   "exclude":["node_modules"]
 }
 ```
@@ -32,7 +32,7 @@ following this direction
 - **In file package.json**  
 ```typescript
   "scripts": {
-    "start": "node test.js",
+    "start": "node index.js",
     "prestart": "tsc"
     }
 ```
@@ -47,7 +47,7 @@ If you don't mind you don't need to do this
 
 //package.json
 "scripts": {
-  "start": "tsc-watch --onSuccess \"node test.js\""
+  "start": "tsc-watch --onSuccess \"node dist/index.js\""
   }
   
 //tsconfig.json
