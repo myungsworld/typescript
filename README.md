@@ -58,7 +58,6 @@ If you don't mind you don't need to do this
        "sourceMap": true,
        "outDir" : "dist"
   },
-  //include는 어src/test.ts일 될지 타입스크립트에 알려줌
   "include":["src/**/*"], 
   "exclude":["node_modules"]
 }
